@@ -7,9 +7,18 @@
     <!-- Add your EJS code here -->
     <ul>
     <% for (key in urls){ %>
-        <li><%= key %> = <%= urls[key] %></li>
+
+
+        <li><%= key %>  (<%= urls[key] %>)</li>
+        <a href="/urls/<%= key %>">Edit</a>
+        <form method="POST" action="/urls/<%= key %>/delete">
+            <input type="submit" value="Delete">
+        </form>
     <% } %>
     </ul>
+
+
+    
 
     <a href="#">Create new short link</a>
 </body>

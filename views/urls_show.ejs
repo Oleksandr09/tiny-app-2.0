@@ -4,6 +4,7 @@
   <title>TinyApp</title>
 </head>
 <body>
+    <% include partials/_header %>
   <h2>ShortURL: <%= shortURL %></h2>
   <form method="POST" action="/urls/<%= shortURL %>">
     <input type="text" name="longURLUpdate">

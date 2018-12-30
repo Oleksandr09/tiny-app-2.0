@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
   <title>TinyApp</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!-- Add your EJS code here -->
     <% include partials/_header %>
     <ul>
-    <% for (key in urls){ %>
-
-
-        <li><%= key %>  (<%= urls[key] %>)</li>
-        <a href="/urls/<%= key %>">Edit</a>
-        <form method="POST" action="/urls/<%= key %>/delete">
-            <input type="submit" value="Delete">
-        </form>
+    <% for (var url in urls){ %>
+        <li>
+            <div><%= url %>  (<%= urls[url] %>)
+            </div>
+            <div>
+            <a href="/urls/<%= url %>"><button>Edit</button></a>
+        </div>   
+        <div>    
+        <form method="POST" action="/urls/<%= url %>/delete">
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+        </li>
     <% } %>
     </ul>
 

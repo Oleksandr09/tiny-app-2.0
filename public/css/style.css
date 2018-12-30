@@ -1,0 +1,16 @@
+li {
+    list-style: none;
+    /* display: flex;
+    justify-content: space-around;
+    width: 600px; */
+}
+
+li div{
+    display: inline-block;
+    width: 100px;
+    margin-top: 15px;
+}
+
+li div:first-child {
+    width: 300px;
+}

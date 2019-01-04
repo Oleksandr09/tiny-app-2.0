@@ -8,9 +8,9 @@
     <!-- Add your EJS code here -->
     <% include partials/_header %>
     <ul>
-    <% for (var url in urls){ %>
+    <% for (var url in urlsObj){ %>
         <li>
-            <div><%= url %>  (<%= urls[url] %>)
+            <div><%= url %>  (<%= urlsObj[url].longURL %>)
             </div>
             <div>
             <a href="/urls/<%= url %>"><button>Edit</button></a>
@@ -23,10 +23,6 @@
         </li>
     <% } %>
     </ul>
-
-
-    
-
-    <a href="#">Create new short link</a>
+    <a href="/urls/new">Create new short link</a>
 </body>
 </html>

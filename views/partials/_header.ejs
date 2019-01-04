@@ -5,14 +5,10 @@
         <a href="/register">Register</a>
     <% } else { %>
     <h2>
-        <%=user.id%>
+        <%=user.email%>
     </h2>
     <form method="POST" action="/logout">
         <input type="submit" value="Logout">
         </form>
     <% } %>
-
-
-    
-  
 </header>

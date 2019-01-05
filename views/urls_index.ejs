@@ -5,24 +5,22 @@
   <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <!-- Add your EJS code here -->
     <% include partials/_header %>
-    <ul>
-    <% for (var url in urlsObj){ %>
-        <li>
-            <div><%= url %>  (<%= urlsObj[url].longURL %>)
-            </div>
-            <div>
-            <a href="/urls/<%= url %>"><button>Edit</button></a>
-        </div>   
-        <div>    
-        <form method="POST" action="/urls/<%= url %>/delete">
-                <input type="submit" value="Delete">
-            </form>
-        </div>
-        </li>
-    <% } %>
-    </ul>
-    <a href="/urls/new">Create new short link</a>
+        <ul>
+        <% for (let url in urlsObj){ %>
+            <li>
+                <div><%= url %>  (<%= urlsObj[url].longURL %>)</div>
+                <div>
+                    <a href="/urls/<%= url %>"><button>Edit</button></a>
+                </div>   
+                <div>    
+                    <form method="POST" action="/urls/<%= url %>/delete">
+                        <input type="submit" value="Delete">
+                    </form>
+                </div>
+            </li>
+        <% } %>
+        </ul>
+        <a href="/urls/new">Create new short link</a>
 </body>
 </html>
